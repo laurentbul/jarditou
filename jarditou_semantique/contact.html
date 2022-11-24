@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>cours exercices HTML</title>
+</head>
+
+<body>
+    <img src="./src/img/jarditou_logo.jpg" alt="logo" height="80">
+    <p>La qualité depuis 70 ans</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tableau.html">Tableau</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <img src="./src/img/promotion.jpg" alt="qu'est ce que html">
+        <hr>
+        <h2>Contact</h2>
+        <form>
+            <p>* Ces zones sont obligatoires</p>
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <label for="nom">Nom*:</label><input type="text" name="nom" id="nom"><br>
+                <label for="prenom">Prénom*:</label><input type="text" name="prenom" id="prenom"><br>
+                <label for="sexe">Sexe*:</label>
+                <input type="radio" name="sexe" id="sexe" value="feminin"> Féminin
+                <input type="radio" name="sexe" value="masculin" checked> Masculin<br>
+                <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+                <label for="email">Email*:</label><input type="email" name="email" id="email"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Votre demande</legend>
+                <label for="sujet">Sujet</label>
+                <select name="sujet" id="sujet">
+                    <option value="information">information</option>
+                    <option value="inscription">inscription</option>
+                    <option value="autre">Autre</option>
+                </select><br>
+                <label for="question">Votre question*:</label>
+                <textarea name="question" id="question" rows="4"
+                    cols="50">Lorem ipsum dolor sit amet consectetur adœipisicing elit. Odit quae reiciendis ab! Perspiciatis expedita eum libero a cupiditate, reiciendis mollitia at possimus nobis minima, magnam distinctio blanditiis ex! Qui, illum.</textarea>`<br>
+            </fieldset>
+            <input type="checkbox" id="formulaire" name="formulaire" value="formulaire">
+            <label> *J'accepte le traitment informatique de ce formulaire</label><br>
+            <input type="submit" value="Envoyer">
+            <input type="submit" value="Annuler">
+        </form>
+        <hr>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="mentionlegale.html">Mention légales</a></li>
+                <li><a href="horaire.html">Horaires</a></li>
+                <li><a href="plandusite.html">Plan du site</a></li>
+            </ul>
+            <a href="mailto:dave.loper@afpa.fr" title="Nous contacter">Ecrivez-nous</a> 
+        </nav>
+    </footer>
+</body>
+
+
+</html>
