@@ -8,7 +8,9 @@
 
 <body>
   <div class="flex-container">
-    <div><img src="./assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo" height="80" /></div>
+    <div>
+      <img src="./assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo" height="80" />
+    </div>
     <div>
       <p class="slogan">La qualité depuis 70 ans</p>
     </div>
@@ -18,88 +20,121 @@
       <li><a href="index.html">Accueil</a></li>
       <li><a href="table.html">Tableau</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li class="search-container">
+        <div>
+          <form action="/action_page.php">
+            <input type="text" class="searchinput" placeholder="Search.." name="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </li>
     </ul>
-    <div class="search-container">
-      <form action="/action_page.php">
-        <input type="text" class="searchinput" placeholder="Search.." name="search" />
-        <button type="submit">Search</button>
-      </form>
-    </div>
   </nav>
-
   <img src="./assets/img/promotion.jpg" alt="qu'est ce que html" class="imgpromotion" title="promotion jarditou" />
   <hr />
+  <h2>Contact</h2>
   <section>
-    <h2>Contact</h2>
-    <div class="row">
-      <div class="col-25">
-        <label for="nom">Nom</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="nom" name="nom" placeholder="votre nom de famille..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="prenom">Prenom</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="prenom" name="prenom" placeholder="votre prenom..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <hr>
-        <label >Votre sexe :</label>
-      </div>
-      <div class="col-75">
-        <p>
-          <input class="w3-radio" type="radio" name="gender" value="male" checked>
-          <label>Male</label>
-        </p>
-        <p>
-          <input class="w3-radio" type="radio" name="gender" value="female">
-          <label>Female</label>
-        </p>
-        <p>
-          <input class="w3-radio" type="radio" name="gender" value="" disabled>
-          <label>je ne sais pas (désoler ce choix pas possible)</label>
-        </p>
-      </div>
-      <div class="col-25">
-        <label for="pays">Choix du pays </label>
-        <hr>
-      </div>
-      <div class="col-75">
-        <select id="pays" name="pays">
-          <option value="australia">Choix du pays : cliquez ici</option>
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-
-
-        <div>
-          <hr>
-          <label for="birthday">Date de naissance:</label><br>
-          <input type="date" id="birthday" name="birthday">
+    <p>* Ces zones sont obligatoires</p>
+    <form>
+      <div class="row">
+        <div class="col-25">
+          <label for="nom">Nom*:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="nom" name="nom" placeholder="votre nom de famille.." />
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <hr>
-        <label for="subject">Subject</label>
+      <hr />
+      <div class="row">
+        <div class="col-25">
+          <label for="prenom">Prenom*:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="prenom" name="prenom" placeholder="votre prenom.." />
+        </div>
       </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <hr />
+      <div class="row">
+        <div class="col-25">
+          <label>Votre sexe *:</label>
+        </div>
+        <div class="col-75">
+          <p>
+            <input class="w3-radio" type="radio" name="gender" value="male" checked />
+            <label>Male</label>
+          </p>
+          <p>
+            <input class="w3-radio" type="radio" name="gender" value="female" />
+            <label>Female</label>
+          </p>
+          <p>
+            <input class="w3-radio" type="radio" name="gender" value="" disabled />
+            <label>je ne sais pas (désoler ce choix pas possible)</label>
+          </p>
+        </div>
+        <div>
+          <hr />
+          <label for="birthday">Date de naissance*:</label>
+          <br />
+          <input type="date" id="birthday" name="birthday" />
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <input type="submit" class="centerbottom" value="Submit">
-    </div>
+      <hr />
+      <div class="row">
+        <div class="col-25">
+          <label for="cp">Code postal:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="cp" name="cp" placeholder="votre code postal.." />
+        </div>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="adresse">Adresse:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="adresse" name="adresse" placeholder="Votre adresse.." />
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-25">
+          <label for="ville">Ville:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="ville" name="ville" placeholder="Votre Ville.." />
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-25">
+          <label for="pays">Choix du pays:</label>
+          <hr />
+        </div>
+        <div class="col-75">
+          <select id="pays" name="pays">
+            <option value="australia">Choix du pays : cliquez ici</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <hr />
+          <label for="subject">Sujet*:</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px;"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" class="centerbottom" value="Submit" />
+      </div>
+    </form>
   </section>
-
   <footer>
     <nav>
       <ul>
