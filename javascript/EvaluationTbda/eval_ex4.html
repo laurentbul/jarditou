@@ -7,26 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cours exercices HTML</title>
   <link rel="stylesheet" href="../assets/css/stylepageindex.css" />
+
   <style>
     .flex-container2 {
       display: flex;
       background-color: rgb(114, 111, 113);
     }
-
-    .flex-container2>div {
+    
+    .flex-container2 > div {
       background-color: #5cbdca;
       margin: 10px;
       padding: 20px;
       font-size: 30px;
       width: 800px;
     }
-  </style>
+    </style>
 </head>
 
 <body>
   <div class="flex-container">
-    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo"
-        height="80" />
+    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo" height="80" />
     </div>
     <div>
       <p class="slogan">Formation TBDA </p>
@@ -48,95 +48,116 @@
       </li>
     </ul>
   </nav>
+
   <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
     title="promotion jarditou" />
   <hr />
   <h1>Evaluation TBDA 2022</h1>
+  <include src="./horaire.html"></include>
   <hr>
+ 
+
+
   <fieldset>
     <legend style="padding:1px 0; font-size:20px;">
-      <nav>
-        <ul>
-          <li><a href="eval_ex1.html">Exercice 1 </a></li>
-          <li><a href="eval_ex2.html">Exercice 2 </a></li>
-          <li><a href="eval_ex3.html">Exercice 3</a></li>
-          <li><a href="eval_ex4.html">Exercice 4</a></li>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+              <li><a href="eval_ex1.html">Exercice 1 </a></li>
+              <li><a href="eval_ex2.html">Exercice 2 </a></li>
+              <li><a href="eval_ex3.html">Exercice 3</a></li>
+              <li><a href="eval_ex4.html">Exercice 4</a></li>
+              </li>
+            </ul>
+          </nav>
     </legend>
     <div class="flex-container2">
-      <div id="code">
-        <textarea style="height: 600px;width: 700px; color: blue;">
+    <div id="code">
+      <textarea style="height: 600px;width: 700px; color: blue;">
         <script>
-          function add() {
-            var pu, qnt, pap, rem, port;
-            pu = parseInt(document.getElementById("first").value);
-            qnt = parseInt(document.getElementById("second").value);
-            pap = pu * qnt;
-            //rem = pap * prcnt;
-            alert(pap);
-            if (100 <= pap && pap <= 200) {
-              rem = pap * 5 / 100;
-              port = 0;
-              pap = pap - rem - port;
-            }
-            if (pap < 100) {
-              rem = 0;
-              port = 0;
-              pap = pap - rem - port;
-            }
-            else if (pap > 200 && pap < 500) {
-              rem = pap * 10 / 100;
-              port = 0;
-              pap = pap - rem;
-            }
-            else if (pap > 500) {
-              rem = pap * 10 / 100;
-              port = pap * 2 / 100
-              if (port <= 6) {
-                port = 6;
-              }
-              pap = pap - port + rem;
-            }
-            else if (pap < 500) {
-              port = 0;
-              rem = pap * 10 / 100;
-              pap = pap + port + rem;
-            }
-            document.getElementById("answer").innerHTML = "prix à payer net : " + pap + " total remise : " + rem + " cout de transport : " + port;
-            document.getElementById("answer1").innerHTML = "prix à payer net : " + pap + " total remise : " + rem + " cout de transport : " + port;
-          }
-        </script>
+
+            var j=0;
+                var a=0;
+                var v=0;
+                var personnes;
+                    function exercice1(){
+               
+                do {
+            
+            
+                personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+            
+                if (personnes == ""){
+            
+                    break;
+            
+                }
+            
+                else if ( personnes <18) {
+                j++;
+                }
+                else if ((personnes <=18 ) || (personnes <=65)) {
+                    a++;
+                }
+                else if (personnes > 65 || personnes<100){
+               
+                v++;
+                }
+                else if (personnes=="q" || personnes=="Q"){
+                    alert("bye-bye \n merci");
+                    break;
+               }
+                else{
+            
+                alert("Entrer un chiffre svp entre 1 et 100")}
+            
+                }
+                while (personnes !=100);
+                
+                
+                window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+                
+                document.getElementById("ex1").innerHTML="Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ";
+                
+                //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+                }
+                  </script>
     </textarea>
-      </div>
-      <div id="exemple1">
-        <div><input type="button" onclick="varexemple1()" value="exemple1">
-        </div>
+   
+    </div>
+    
+    <div id="exemple1">    <div ><input type="button" onclick="varexemple1()" value="exemple1">
+      
+    </div>
+   
   </fieldset>
-  <input type="button" onclick="myFunction()" value="resetpage"></div>
-  </div>
-  <hr>
-  <script>
-    function varexemple1() {
-      myVar1 = 324;    /* type number*/
-      myVar2 = "Bonjour";  // type string
-      myVar3 = true; // type boolean
-      myVar4 = new Array(); // type object
-      document.getElementById("exemple1").innerHTML =
-        "myVar = 324 : " + typeof myVar1 + "<br>" + "<br>" +
-        "myVar = Bonjour : " + typeof myVar2 + "<br>" + "<br>" +
-        "myVar = true :" + typeof myVar3 + "<br>" + "<br>" +
-        "myVar = true :" + typeof myVar4 + "<br>" + "<br>"
-    }
-    function myFunction() {
-      location.reload();
-    }
-    function reset() {
-      document.getElementById("myForm").reset();
-    }
-  </script>
-  <hr>
+
+
+  <input type="button" onclick="myFunction()" value="resetpage"></div></div>
+<hr>
+<script>
+function varexemple1(){
+myVar1 = 324;    /* type number*/
+myVar2 = "Bonjour";  // type string
+myVar3 = true; // type boolean
+myVar4 = new Array(); // type object
+document.getElementById("exemple1").innerHTML = 
+"myVar = 324 : " + typeof myVar1 + "<br>" +"<br>" +
+"myVar = Bonjour : " + typeof myVar2 + "<br>" +"<br>" +
+"myVar = true :" + typeof myVar3 + "<br>" +"<br>" +
+"myVar = true :" + typeof myVar4 + "<br>" +"<br>" 
+
+}
+
+function myFunction() {
+  location.reload();
+}
+function reset() {
+  document.getElementById("myForm").reset();
+}
+
+</script>
+
+<hr>
   <footer>
     <nav>
       <ul>

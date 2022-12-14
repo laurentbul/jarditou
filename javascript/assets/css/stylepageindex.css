@@ -3,8 +3,12 @@ body {
   padding: 0px;
   background-color: rgb(192, 199, 201);
   font-size: 20px;
+  height: 1500px;
 }
-
+h1{font-size: 35px;
+}
+h2{font-size: 20px;
+}
 .flex-container {
   display: flex;
 }
@@ -59,10 +63,18 @@ a:link {
   text-decoration: none;
 }
 
+ul.a {
+  
+  background-color: rgb(179, 167, 167);
+ 
+  color:rgb(42, 226, 211);
+ 
+}
+
 
 aside {
   width: 30%;
-  height: 430px;
+  height: 25%px;
   padding-left: 15px;
   float: right;
   font-style: italic;
@@ -222,7 +234,8 @@ table {
 
   li {
     background-color: rgb(10, 10, 10);
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 768px;
   }
 
@@ -235,4 +248,8 @@ table {
 }
 
 
+}
+
+.error{
+  color: rgb(197, 22, 22);
 }
