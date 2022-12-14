@@ -2,142 +2,150 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cours exercices HTML</title>
-    <link rel="stylesheet" href="../assets/css/stylepageindex.css" />
-    <style>
-        .flex-container2 {
-            display: flex;
-            background-color: rgb(114, 111, 113);
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cours exercices HTML</title>
+  <link rel="stylesheet" href="../assets/css/stylepageindex.css" />
+  <style>
+    .flex-container2 {
+      display: flex;
+      background-color: rgb(114, 111, 113);
+    }
 
-        .flex-container2>div {
-            background-color: #5cbdca;
-            margin: 10px;
-            padding: 20px;
-            font-size: 30px;
-            width: 800px;
-        }
-    </style>
+    .flex-container2>div {
+      background-color: #5cbdca;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      width: 800px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="flex-container">
-        <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo"
-                height="80" />
-        </div>
-        <div>
-            <p class="slogan">Formation TBDA </p>
-        </div>
+  <div class="flex-container">
+    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo"
+        height="80" />
     </div>
-    <nav>
+    <div>
+      <p class="slogan">Formation TBDA </p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../table.html">Tableau</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../EvaluationTbda/evaluation_tbda.html">Evaluation Tbda</a></li>
+      <li class="search-container">
+        <div>
+          <form action="/action_page.php">
+            <input type="text" class="searchinput" placeholder="Search.." name="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
+    title="promotion jarditou" />
+  <hr />
+  <h1>Evaluation TBDA 2022</h1>
+  <include src="./horaire.html"></include>
+  <hr>
+  <fieldset>
+    <legend style="padding:1px 0; font-size:20px;">
+      <nav>
         <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../table.html">Tableau</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../EvaluationTbda/evaluation_tbda.html">Evaluation Tbda</a></li>
-            <li class="search-container">
-                <div>
-                    <form action="/action_page.php">
-                        <input type="text" class="searchinput" placeholder="Search.." name="search" />
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
-            </li>
+          <li><a href="eval_ex1.html">Exercice 1 </a></li>
+          <li><a href="eval_ex2.html">Exercice 2 </a></li>
+          <li><a href="eval_ex3.html">Exercice 3</a></li>
+          <li><a href="eval_ex4.html">Exercice 4</a></li>
+          </li>
         </ul>
-    </nav>
-    <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
-        title="promotion jarditou" />
-    <hr />
-    <h1>Evaluation TBDA 2022</h1>
-    <include src="./horaire.html"></include>
-    <hr>
-    <fieldset>
-        <legend style="padding:1px 0; font-size:20px;">
-            <nav>
-                <ul>
-                    <li><a href="eval_ex1.html">Exercice 1 </a></li>
-                    <li><a href="eval_ex2.html">Exercice 2 </a></li>
-                    <li><a href="eval_ex3.html">Exercice 3</a></li>
-                    <li><a href="eval_ex4.html">Exercice 4</a></li>
-                    </li>
-                </ul>
-            </nav>
-        </legend>
-        <div class="flex-container2">
-            <div id="code">
-                <h5>JavaScript Exercice Exercice 2 : Table de multiplication</h5>
-                <textarea style="height: 600px;width: 700px; color: blue;">
+      </nav>
+    </legend>
+    <div class="flex-container2">
+      <div id="code">
+        <h5>JavaScript Exercice 3 : recherche d'un prénom</h5>
+        <textarea style="height: 600px;width: 700px; color: blue;">
                   <script>
                     function tableau() {
                       var deletelement = prompt("entrer quel valeur vous voulez supprimer : \n Banana, Orange, Apple, Mango");
-                      const fruits = ["Banana", "Orange", "Apple", "Mango"];
-                      let fLen = fruits.length;
+                      const prenoms = ["Banana", "Orange", "Apple", "Mango"];
+                      let fLen = prenoms.length;
                       let text = "<ul>";
                       for (let i = 0; i < fLen; i++) {
-                        text += "<li>" + "[" + i + "]" + fruits[i] + "</li>";
-                        if (fruits[i] == deletelement) {
-                          alert(" i am : " + fruits[i] + " ma place dans le tableau : " + i);
-                          fruits.splice(i, 1);
+                        text += "<li>" + "[" + i + "]" + prenoms[i] + "</li>";
+                        if (prenoms[i] == deletelement) {
+                          alert(" i am : " + prenoms[i] + " ma place dans le tableau : " + i);
+                          prenoms.splice(i, 1);
                           document.getElementById("demo1").innerHTML = "la suppression c'est bien passé";
                         }
                       }
                       text += "</ul>";
-                      document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : fruits [" + fruits + " ] ";
+                      document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : prenoms [" + prenoms + " ] ";
                     }
                   </script>
     </textarea>
-            </div>
-            <div id="ex1">
-                <div>
-                  <h1>JavaScript Arrays</h1>
-                  Notre Tableau :
-                  fruits = ["Banana", "Orange", "Apple", "Mango"];
-                  <p>Choisissez ce que vous voulez supprimer</p>
-                  <p id="demo1"></p>
-                  <p id="demo" style="color:blue"></p>
-                  <input type="button" onclick="tableau()" value=" supprimer valeur dans tableau" />
-                </div>
-            </div>
+      </div>
+      <div id="ex1">
+        <div>
+          <h5>JavaScript Exercice 3 sur tableau </h5>
+          <h6>Notre Tableau :
+            prenoms = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", " "];
+            <p>Cliquez sur supprimer pour commencer</p>
+          </h6>
+          <p id="demo1"></p>
+          <p id="demo" style="color:blue"></p>
+          <input type="button" onclick="tableau()" value=" supprimer valeur dans tableau" />
+          <input type="button" onclick="myFunction()" value="Recommencer" />
         </div>
-    </fieldset>
-    <hr>
-    <script>
-      function tableau() {
-        var deletelement = prompt("entrer quel valeur vous voulez supprimer : \n Banana, Orange, Apple, Mango");
-        const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        let fLen = fruits.length;
-        let text = "<ul>";
-        for (let i = 0; i < fLen; i++) {
-          text += "<li>" + "[" + i + "]" + fruits[i] + "</li>";
-          if (fruits[i] == deletelement) {
-            alert(" i am : " + fruits[i] + " ma place dans le tableau : " + i);
-            fruits.splice(i, 1);
-            document.getElementById("demo1").innerHTML = "la suppression c'est bien passé";
-          }
+      </div>
+    </div>
+  </fieldset>
+  <hr>
+  <script>
+    function tableau() {
+      var deletelement = prompt("entrer quel valeur vous voulez supprimer : \n Flavien, Jérémy, Laurent, Melik, Nouara, Salem, Samuel");
+      const prenoms = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel"];
+      let fLen = prenoms.length;
+      let text = "<ul>";
+      for (let i = 0; i < fLen; i++) {
+        text += "<li>" + "[" + i + "]" + prenoms[i] + "</li>";
+        if (prenoms[i] == deletelement) {
+          alert(" i am : " + prenoms[i] + " ma place dans le tableau : " + i);
+          prenoms.splice(i, 1);
+          document.getElementById("demo1").innerHTML = "la suppression c'est bien passé";
         }
-        text += "</ul>";
-        document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : fruits [" + fruits + " ] ";
       }
-    </script>
-    <hr>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="mentionlegale.html">Mention légales</a></li>
-                <li><a href="horaire.html">Horaires</a></li>
-                <li><a href="plandusite.html">Plan du site</a></li>
-            </ul>
-        </nav>
-        <p style="color: rgb(244, 238, 238);">
-            &copy; Copyright 2022 by laurent. All Rights Reserved. Jarditou
-            <a href="mailto:dave.loper@afpa.fr" title="Nous contacter">
-                Cliquez ici => Ecrivez-nous : mailto
-            </a>
-        </p>
-    </footer>
+      text += "</ul>";
+      document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : prenoms [" + prenoms + " ] ";
+    }
+    function myFunction() {
+      location.reload();
+    }
+    function reset() {
+      document.getElementById("myForm").reset();
+    }
+  </script>
+  <hr>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="mentionlegale.html">Mention légales</a></li>
+        <li><a href="horaire.html">Horaires</a></li>
+        <li><a href="plandusite.html">Plan du site</a></li>
+      </ul>
+    </nav>
+    <p style="color: rgb(244, 238, 238);">
+      &copy; Copyright 2022 by laurent. All Rights Reserved. Jarditou
+      <a href="mailto:dave.loper@afpa.fr" title="Nous contacter">
+        Cliquez ici => Ecrivez-nous : mailto
+      </a>
+    </p>
+  </footer>
 </body>
 
 </html>
