@@ -40,7 +40,6 @@
   <section>
     <p>* Ces zones sont obligatoires</p>
     <form id="form" action="javascript:validation()">
-      <!-- ==============================================1 nom=========================================================================== -->
       <div class="row">
         <div class="col-25">
           <label>Nom*:</label>
@@ -48,8 +47,6 @@
         <input type="text" id="fname" value="" placeholder="votre nom de famille..">
         <div class="error" id="commentaire1"> </div>
       </div>
-
-      <!-- ===============================================2========================================================================== -->
       <div class="row">
         <div class="col-25">
           <label>Prenom*:</label>
@@ -57,29 +54,20 @@
         <input type="text" id="fprenom" placeholder="votre nom de famille..">
         <div class="error" id="commentaire2"> </div>
       </div>
-
-
-      <!-- =================================================3=======================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> Date de naissance *:</label>
         </div>
         <input type="date" id="fdtn" placeholder="votre nom de famille..">
         <div class="error" id="commentaire3"></div>
-
       </div>
-
-      <!-- ===============================================4=========================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> ville *:</label>
         </div>
         <input type="text" id="fville" placeholder="votre nom de famille..">
         <div class="error" id="commentaire4"></div>
-
       </div>
-
-      <!-- =============================================5===========================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> adresse *:</label>
@@ -87,7 +75,6 @@
         <input type="text" id="fadresse" placeholder="votre nom de famille..">
         <div class="error" id="commentaire5"></div>
       </div>
-      <!-- ==================================================6=====================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> Code postal *:</label>
@@ -99,11 +86,8 @@
         <div class="col-25">
           <label> Pays *:</label>
         </div>
-
         <input type="text" id="fpays" placeholder="votre nom de famille..">
-
         <div class="error" id="commentaire7"></div>
-
       </div>
       <div class="row">
         <div class="col-25">
@@ -117,7 +101,6 @@
         </select>
         <div class="error" id="commentaire8"></div>
       </div>
-      <!-- =================================================9=======================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> Sujet *:</label>
@@ -130,7 +113,6 @@
         <input type="checkbox" class="custom-control-input" id="cgu" name="cgu" required>
         <label class="custom-control-label" for="cgu">* J'accepte le traitement informatique de ce formulaire.</label>
       </div><br>
-      <!-- ========================================================================================================================<br> -->
       <input type="button" onclick="validateForm()" value="Valider form"> <input type="reset" onclick="myreset()"
         value="Reset">
       <script>
@@ -152,9 +134,7 @@
       </script>
     </form>
     </div>
-
     <script type="text/javascript" src="./assets/js/contact.js"></script>
-
 </body>
 
 </html>
