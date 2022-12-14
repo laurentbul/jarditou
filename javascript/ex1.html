@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myDiv {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myDiv">
+        bonjour
+        ca vas
+        <div id="ex1"></div>
+        <input type="button" onclick="exercice1()" value="entrer" />
+    </div>
+    <script>
+        var j = 0;
+        var a = 0;
+        var v = 0;
+        var personnes;
+        function exercice1() {
+            do {
+                personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+                if (personnes == "") {
+
+                    break;
+                }
+                else if (personnes < 18) {
+                    j++;
+                }
+                else if ((personnes <= 18) || (personnes <= 65)) {
+                    a++;
+                }
+                else if (personnes > 65 || personnes < 100) {
+                    v++;
+                }
+                else if (personnes == "q" || personnes == "Q") {
+                    alert("bye-bye \n merci");
+                    break;
+                }
+                else {
+                    alert("Entrer un chiffre svp entre 1 et 100")
+                }
+            }
+            while (personnes != 100);
+            window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+            document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
+            //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+        }
+    </script>
+</body>
+
+</html>

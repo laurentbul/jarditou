@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cours exercices HTML</title>
+  <link rel="stylesheet" href="../assets/css/stylepageindex.css" />
+
+  <style>
+    .flex-container2 {
+      display: flex;
+      background-color: rgb(114, 111, 113);
+    }
+
+    .flex-container2>div {
+      background-color: #5cbdca;
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo"
+        height="80" />
+    </div>
+    <div>
+      <p class="slogan">Formation TBDA </p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../table.html">Tableau</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../EvaluationTbda/evaluation_tbda.html">Evaluation Tbda</a></li>
+      <li class="search-container">
+        <div>
+          <form action="/action_page.php">
+            <input type="text" class="searchinput" placeholder="Search.." name="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
+    title="promotion jarditou" />
+  <hr />
+  <h1>Evaluation TBDA 2022</h1>
+  <include src="./horaire.html"></include>
+  <hr>
+  <fieldset>
+    <legend style="padding:1px 0; font-size:20px;">
+      <nav>
+        <ul>
+          <li><a href="eval_ex1.html">Exercice 1 </a></li>
+          <li><a href="eval_ex2.html">Exercice 2 </a></li>
+          <li><a href="eval_ex3.html">Exercice 3</a></li>
+          <li><a href="eval_ex4.html">Exercice 4</a></li>
+          </li>
+        </ul>
+      </nav>
+    </legend>
+    <div class="flex-container2">
+      <div id="code">
+        <textarea style="height: 600px;width: 700px; color: blue;">
+        <script>
+          function multiply() {
+            var n = document.getElementById('num').value;
+            var l = document.getElementById('limit').value;
+            var out = "";
+            for (var i = 1; i <= 10; i++) {
+              out = out + i + " * " + n + " = " + i * n + "<br/>";
+            }
+            document.getElementById("result").innerHTML = out;
+          }
+        </script>
+    </textarea>
+      </div>
+      <div id="exemple1">
+        <div><input type="button" onclick="varexemple1()" value="exemple1">
+        </div>
+  </fieldset>
+  <input type="button" onclick="myFunction()" value="resetpage"></div>
+  </div>
+  <hr>
+  <script>
+    function varexemple1() {
+      myVar1 = 324;    /* type number*/
+      myVar2 = "Bonjour";  // type string
+      myVar3 = true; // type boolean
+      myVar4 = new Array(); // type object
+      document.getElementById("exemple1").innerHTML =
+        "myVar = 324 : " + typeof myVar1 + "<br>" + "<br>" +
+        "myVar = Bonjour : " + typeof myVar2 + "<br>" + "<br>" +
+        "myVar = true :" + typeof myVar3 + "<br>" + "<br>" +
+        "myVar = true :" + typeof myVar4 + "<br>" + "<br>"
+    }
+    function myFunction() {
+      location.reload();
+    }
+    function reset() {
+      document.getElementById("myForm").reset();
+    }
+  </script>
+  <hr>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="mentionlegale.html">Mention légales</a></li>
+        <li><a href="horaire.html">Horaires</a></li>
+        <li><a href="plandusite.html">Plan du site</a></li>
+      </ul>
+    </nav>
+    <p style="color: rgb(244, 238, 238);">
+      &copy; Copyright 2022 by laurent. All Rights Reserved. Jarditou
+      <a href="mailto:dave.loper@afpa.fr" title="Nous contacter">
+        Cliquez ici => Ecrivez-nous : mailto
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>

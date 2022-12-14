@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        PU d'un produit et de la quantité commandée QTECOM, afficher le prix à payer PAP, en détaillant la remise REM et le port PORT, sachant que :
+        Article: <input type="text" id="art" /><br>
+        PU: <input type="text" id="pu" /><br>
+        QTECOM: <input type="text" id="qnt" /><br>
+        PAP: <input type="text" id="pap" /><br>
+        REM: <input type="text" id="rem" /><br>
+        Port: <input type="text" id="port" /><br>
+        
+        <input type="button" onClick="papt()" Value="total a payer" />
+    </form>
+    <p>The Result is : <br>
+        <span id="result"></span>
+    </p>
+
+    <script>
+var pu=0;
+var art=0;
+var qnt=0;
+var pap=0;
+var rem=0;
+var port=0;
+function papt(){
+
+
+if(pu==null||qnt==null)
+{
+alert ("vous avez entrer des valeurs non conform");
+}
+if(pu =="" || qnt =="")
+{
+alert ("vous avez entrer des valeurs");
+}
+
+else
+{
+    document.getElementById("pap").innerHTML = qnt * pu;
+    alert("pap");
+}
+document.getElementById("answer").value = pap +" " +rem  +" " + port ;
+}
+    </script>
+</body>
+
+</html>
