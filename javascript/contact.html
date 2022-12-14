@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cours exercices HTML</title>
   <link rel="stylesheet" href="./assets/css/stylepageindex.css" />
-  <!-- <link rel="stylesheet" href="./assets/js/contanct.js" /> -->
-
 </head>
 
 <body>
@@ -50,24 +48,7 @@
         <input type="text" id="fname" value="" placeholder="votre nom de famille..">
         <div class="error" id="commentaire1"> </div>
       </div>
-      <input type="button" onclick="nom()" value="btnnom"></div>
-      <script>
-        function nom() {
-          let patternnumber = /^\d+$/
-          let pattern = /^[a-zA-Z\s]+$/;
-          let result = pattern.test(vnom);
-          var vnom = document.getElementById("fname").value;
-          if (vnom == "") {
-            document.getElementById("commentaire1").innerHTML = "vous avez pas entrer votre nom!";
-          }
-          else if (pattern.test(vnom) === false) {
-            document.getElementById("commentaire1").innerHTML = "non conforme:";
-            document.getElementById("commentaire1").style.color = "red";
-          }
-          else { document.getElementById("commentaire1").innerHTML = "conforme votre pays :" + vnom;
-          document.getElementById("commentaire1").style.color = "black"; }
-        }
-      </script>
+
       <!-- ===============================================2========================================================================== -->
       <div class="row">
         <div class="col-25">
@@ -76,19 +57,8 @@
         <input type="text" id="fprenom" placeholder="votre nom de famille..">
         <div class="error" id="commentaire2"> </div>
       </div>
-      <input type="button" onclick="prenom()" value="btnPrenom">
-      <script>
-        function prenom() {
-          vprenom = document.getElementById("fprenom").value;
-          if (vprenom == "") {
-            document.getElementById("commentaire2").innerHTML = "vous avez pas entrer de valeur";
-          }
-          else {
-            document.getElementById("commentaire2").innerHTML = "hello :" + vprenom;
-            document.getElementById("commentaire2").style.color = "black"; 
-          }
-        }
-      </script>
+
+
       <!-- =================================================3=======================================================================<br> -->
       <div class="row">
         <div class="col-25">
@@ -96,20 +66,9 @@
         </div>
         <input type="date" id="fdtn" placeholder="votre nom de famille..">
         <div class="error" id="commentaire3"></div>
-        <input type="button" onclick="dtn()" value="btn-dtn()">
+
       </div>
-      <script>
-        function dtn() {
-          vardtn = document.getElementById("fdtn").value;
-          if (vardtn == "") {
-            document.getElementById("commentaire3").innerHTML = "no no";
-          }
-          else {
-            document.getElementById("commentaire3").innerHTML = "oui :" + vardtn;
-            document.getElementById("commentaire3").style.color = "black"; 
-          }
-        }
-      </script>
+
       <!-- ===============================================4=========================================================================<br> -->
       <div class="row">
         <div class="col-25">
@@ -117,20 +76,9 @@
         </div>
         <input type="text" id="fville" placeholder="votre nom de famille..">
         <div class="error" id="commentaire4"></div>
-        <input type="button" onclick="ville()" value="btnvile">
+
       </div>
-      <script>
-        function ville() {
-          var varville = document.getElementById("fville").value;
-          if (varville == "") {
-            document.getElementById("commentaire4").innerHTML = "vide vide";
-          }
-          else {
-            document.getElementById("commentaire4").innerHTML = "oui :" + varville;
-            document.getElementById("commentaire4").style.color = "black"; 
-          }
-        }
-      </script>
+
       <!-- =============================================5===========================================================================<br> -->
       <div class="row">
         <div class="col-25">
@@ -138,46 +86,15 @@
         </div>
         <input type="text" id="fadresse" placeholder="votre nom de famille..">
         <div class="error" id="commentaire5"></div>
-        <input type="button" onclick="adresse()" value="btnadresse">
       </div>
-      <script>
-        function adresse() {
-          var varadresse = document.getElementById("fadresse").value;
-
-          if (varadresse == "") {
-
-            document.getElementById("commentaire5").innerHTML = "adresse boxe vide";
-          }
-
-          else {
-            document.getElementById("commentaire5").innerHTML = "hello :" + varadresse;
-            document.getElementById("commentaire5").style.color = "black"; 
-          }
-        }
-      </script>
-      <!-- ===================================================6=====================================================================<br> -->
+      <!-- ==================================================6=====================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> Code postal *:</label>
         </div>
         <input type="number" id="fcodepostal" placeholder="votre nom de famille..">
         <div class="error" id="commentaire6"></div>
-        <input type="button" onclick="cdpost()" value="btncdpostal">
       </div>
-      <script>
-        function cdpost() {
-          var varcdpost = document.getElementById("fcodepostal").value;
-          if (varcdpost == "") {
-            document.getElementById("commentaire6").innerHTML = "cdp vide";
-
-          }
-          else {
-            document.getElementById("commentaire6").innerHTML = "votre codepostale :" + varcdpost;
-            document.getElementById("commentaire6").style.color = "black"; 
-          }
-        }
-      </script>
-      <!-- ===================================================7=====================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> Pays *:</label>
@@ -186,25 +103,8 @@
         <input type="text" id="fpays" placeholder="votre nom de famille..">
 
         <div class="error" id="commentaire7"></div>
-        <input type="button" onclick="pays()" value="btnpays">
+
       </div>
-      <script>
-        function pays() {
-          let patternnumber = /^\d+$/
-          let pattern = /^[a-zA-Z\s]+$/;
-          let result = pattern.test(varpays);
-          var varpays = document.getElementById("fpays").value;
-          if (varpays == "") {
-            document.getElementById("commentaire7").innerHTML = "vide pays";
-          }
-          else if (pattern.test(varpays) === false) {
-            document.getElementById("commentaire7").innerHTML = "non conforme:" + varpays;
-          }
-          else { document.getElementById("commentaire7").innerHTML = "conforme votre pays :" + varpays; 
-          document.getElementById("commentaire7").style.color = "black"; }
-        }
-      </script>
-      <!-- ================================================8========================================================================<br> -->
       <div class="row">
         <div class="col-25">
           <label> favoris:</label>
@@ -215,18 +115,8 @@
           <option>brezil</option>
           <option>japon</option>
         </select>
-
         <div class="error" id="commentaire8"></div>
-        <input type="button" onclick="selectfavoris()" value="selectfavoris()">
       </div>
-      <script>
-        function selectfavoris() {
-          var varfavoris = document.getElementById("paysselect").value;
-          if (varfavoris == "") { document.getElementById("commentaire8").innerHTML = "moi vide" }
-          else { document.getElementById("commentaire8").innerHTML = "selection est :" + varfavoris; 
-          document.getElementById("commentaire8").style.color = "black"; }
-        }
-      </script>
       <!-- =================================================9=======================================================================<br> -->
       <div class="row">
         <div class="col-25">
@@ -234,76 +124,32 @@
         </div>
         <textarea id="fsujet" name="fsujet" placeholder="Write something.."
           style="height: 200px; width: 100%;"></textarea>
-        <div class="error"  id="commentaire9"></div>
-        <input type="button" onclick="sujet()" value="btnsujet()">
+        <div class="error" id="commentaire9"></div>
       </div>
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="cgu" name="cgu" required>
         <label class="custom-control-label" for="cgu">* J'accepte le traitement informatique de ce formulaire.</label>
       </div><br>
+      <!-- ========================================================================================================================<br> -->
+      <input type="button" onclick="validateForm()" value="Valider form"> <input type="reset" onclick="myreset()"
+        value="Reset">
       <script>
-        function sujet() {
-          var varsujet = document.getElementById("fsujet").value;
-          if (varsujet == "") { document.getElementById("commentaire9").innerHTML = "sujet pas"; }
-          else { document.getElementById("commentaire9").innerHTML = "votre sujet " + varsujet;
-          document.getElementById("commentaire9").style.color = "black";  }
+        function myreset() {
+          var element_length = document.getElementsByClassName("error").length;
+          var dt = [];
+          typeof dt;
+          for (var x = 0; x < element_length; x++) {
+            tmp = x + 1;
+            dt[x] = document.getElementById("commentaire" + tmp).innerHTML;
+            document.getElementById("commentaire" + tmp).innerHTML = " ";
+          }
+          var output_error = "vos valeurs enrées :"
+          for (var x = 0; x < element_length; x++) {
+            output_error = output_error + "\n" + dt[x];
+          }
+          alert(output_error);
         }
       </script>
-      <!-- ========================================================================================================================<br> -->
-      <input type="button" onclick="validateForm()" value="Valider form">  <input type="reset"  onclick="myreset()" value="Reset">
-      <script>
-     
-        function myreset() {
-      
-        //  document.getElementById("commentaire9").innerHTML = ""; 
-        //  document.getElementById("commentaire8").innerHTML = "";
-        //  document.getElementById("commentaire7").innerHTML = ""; 
-        //  document.getElementById("commentaire6").innerHTML = "";
-        //  document.getElementById("commentaire5").innerHTML = ""; 
-        //  document.getElementById("commentaire4").innerHTML = "";
-        //  document.getElementById("commentaire3").innerHTML = ""; 
-        //  document.getElementById("commentaire2").innerHTML = "";
-        //  document.getElementById("commentaire1").innerHTML = "";  
-
-
-         var element_length = document.getElementsByClassName("error").length;
-         //alert(element_length-1);
-         var dt = [];
-         typeof dt;
-         for(var x=0; x < element_length;x++){
-          tmp = x+1;
-          dt[x] = document.getElementById("commentaire"+tmp).innerHTML;
-          document.getElementById("commentaire"+tmp).innerHTML = " ";
-          // alert(dt[x]);
-         }
-         
-        //  document.getElementById("commentaire2").innerHTML = dt[0];
-        //  alert(dt[x]);
-        var output_error="vos valeurs enrées :"
-         for(var x=0; x < element_length;x++){
-          //document.getElementById("commentaire9").innerHTML = document.getElementById("commentaire9").innerHTML + " " + dt[x]
-          output_error =  output_error + "\n"+ dt[x];
-        }
-        alert(output_error);
-
-
-        //  for(var x=0; x < element_length;x++){
-        //   document.getElementById("commentaire9").innerHTML = document.getElementById("commentaire9").innerHTML + " ; " + dt[x];
-        //  }
-
-
-         //const nodes = element.getElementsByClassName("error");
-          //document.getElementById("commentaire9").innerHTML = nodes;
-          //nodes[8].innerHTML="hello";
-
-
-
-
-          // let menu = document.getElementById('menu');
-
-
-        }
-        </script>
     </form>
     </div>
 
