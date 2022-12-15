@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cours exercices HTML</title>
-    <link rel="stylesheet" href="./assets/css/stylepageindex.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cours exercices HTML</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
 <body>
   <div class="flex-container">
@@ -34,18 +34,20 @@
   </nav>
   <img src="./assets/img/promotion.jpg" alt="qu'est ce que html" class="imgpromotion" title="promotion jarditou" />
   <hr />
-  <h2>Tableau</h2>
+  <h1>Tableau</h1>
   <table style="width: 80%;">
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Id</th>
+        <th>Catégorie</th>
+        <th>Libellé</th>
+        <th>Prix</th>
+        <th>Couleur</th>
+      </tr>
+    </thead>
     <tr>
-      <th>Photo</th>
-      <th>Id</th>
-      <th>Catégorie</th>
-      <th>Libellé</th>
-      <th>Prix</th>
-      <th>Couleur</th>
-    </tr>
-    <tr>
-      <td><img src="./assets/img/7.jpg" alt="logo" height="80" /></td>
+      <td><img src="./assets/img/7.jpg" alt="logo" height="80" title="Barbecues Aramis" /></td>
       <td>7</td>
       <td>Barbecues</td>
       <td>Aramis</td>
@@ -53,7 +55,7 @@
       <td>Brun</td>
     </tr>
     <tr>
-      <td><img src="./assets/img/8.jpg" alt="logo" height="80" /></td>
+      <td><img src="./assets/img/8.jpg" alt="logo" height="80" title="Barbecues Athos" /></td>
       <td>8</td>
       <td>Barbecues</td>
       <td>Athos</td>
@@ -61,7 +63,7 @@
       <td>Noir</td>
     </tr>
     <tr>
-      <td><img src="./assets/img/11.jpg" alt="logo" height="80" /></td>
+      <td><img src="./assets/img/11.jpg" alt="logo" height="80" title="Barbecues Clatronic" /></td>
       <td>11</td>
       <td>Barbecues</td>
       <td>Clatronic</td>
@@ -69,7 +71,7 @@
       <td>Chrome</td>
     </tr>
     <tr>
-      <td><img src="./assets/img/12.jpg" alt="logo" height="80" /></td>
+      <td><img src="./assets/img/12.jpg" alt="logo" height="80" title="Barbecues Camping" /></td>
       <td>12</td>
       <td>Barbecues</td>
       <td>Camping</td>
@@ -78,7 +80,7 @@
     </tr>
     <tr>
       <td>
-        <img src="./assets//img/13.jpg" alt="logo" width="90" height="80" />
+        <img src="./assets//img/13.jpg" alt="logo" width="90" height="80" title="image 13" />
       </td>
       <td>13</td>
       <td>Brouettes</td>

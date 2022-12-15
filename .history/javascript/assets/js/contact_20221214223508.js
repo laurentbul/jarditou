@@ -3,7 +3,9 @@ function validateForm() {
     let pattern = /^[a-zA-Z\s]+$/;
     let patternisnumber = /^[1-9]\d+$/
     let patterndtn = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/;
-    const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const emailRegExp =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
 
     vnom = document.getElementById("fname").value;
     vprenom = document.getElementById("fprenom").value;
@@ -15,6 +17,7 @@ function validateForm() {
     var varfavoris = document.getElementById("paysselect").value;
     var varsujet = document.getElementById("fsujet").value;
     // =============================================1=== ton nom =====================================
+    // vnom = document.getElementById("fname").value;
     if (vnom == "") {
         document.getElementById("commentaire1").innerHTML = "Entrez votre nom : nom obligatoire";
         document.getElementById("fname").focus();
@@ -34,6 +37,7 @@ function validateForm() {
 
     // ============================================2==== ton prenom =====================================
 
+    // vprenom=document.getElementById("fprenom").value; 
     vprenom = document.getElementById("fprenom").value;
     if (vprenom == "") {
         document.getElementById("commentaire2").innerHTML = "Entrez votre prenom : nom obligatoire";
@@ -50,6 +54,8 @@ function validateForm() {
     // // ===========================================3===== ta date de naissance =====================================
 
 
+    // vardtn=document.getElementById("fdtn").value;
+
     if (vardtn == "") {
         document.getElementById("commentaire3").innerHTML = "entrez votre date de naissance";
     }
@@ -63,6 +69,8 @@ function validateForm() {
 
     // // ============================================4==== ta ville =====================================
 
+    // // var varville= document.getElementById("fville").value;
+
     if (varville == "") {
         document.getElementById("commentaire4").innerHTML = "Entrez vtre ville obligatoire champs ne peut pas etre vide";
     }
@@ -75,6 +83,8 @@ function validateForm() {
     }
 
     // // =========================================5======= ton adresse=====================================
+
+    // // var varadresse=document.getElementById("fadresse").value;
 
 
     if (varadresse == "") {
@@ -91,10 +101,15 @@ function validateForm() {
 
     // // =============================================6=== ton code postale=====================================
 
+    // // var varcdpost=document.getElementById("fcodepostal").value;
+
+   // var varcdpost = document.getElementById("fcodepostal").value;
     if (varcdpost == "") {
         document.getElementById("commentaire6").innerHTML = "cdp vide";
     }
-
+    // else if (varcdpost.length < 6) {
+    //     document.getElementById("commentaire6").innerHTML = "il faut rentrer le bon code postale";
+    // }
     else if (patternisnumber.test(varcdpost) === false) {
         document.getElementById("commentaire6").innerHTML = "il faut 5 chiffre:";
     }
@@ -104,6 +119,7 @@ function validateForm() {
     }
     // // ==============================================7== ton pays=====================================
 
+    // // var varpays=document.getElementById("fpays").value;
     if (varpays == "") {
         document.getElementById("commentaire7").innerHTML = "vide pays";
     }

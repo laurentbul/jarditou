@@ -13,21 +13,20 @@
       display: flex;
       background-color: rgb(255, 30, 206);
     }
-
-    .flex-container2>div {
+    
+    .flex-container2 > div {
       background-color: #e4bcbc;
       margin: 10px;
       padding: 20px;
       font-size: 30px;
       width: 800px;
     }
-  </style>
+    </style>
 </head>
 
 <body>
   <div class="flex-container">
-    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo"
-        height="80" />
+    <div class="logo"><img src="../assets/img/jarditou_logo.png" alt="jarditou logo" title="jarditou logo" height="80" />
     </div>
     <div>
       <p class="slogan">Formation TBDA </p>
@@ -53,23 +52,27 @@
   <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
     title="promotion jarditou" />
   <hr />
-  <h1>Evaluation fin de formation : Tbda</h1>
+  <h1>Accueil</h1>
+  <include src="./horaire.html"></include>
   <hr>
-
+ 
 
 
   <fieldset>
-    <nav style="padding:1px 0; font-size:20px;">
-      <ul>
-        <li><a href="eval_ex1.html">Exercice 1 </a></li>
-        <li><a href="eval_ex2.html">Exercice 2 </a></li>
-        <li><a href="eval_ex3.html">Exercice 3</a></li>
-        <li><a href="eval_ex4.html">Exercice 4</a></li>
-      </ul>
-    </nav>
+    <legend style="padding:1px 0; font-size:20px;">
+      <nav>
+          <ul>
+            <li><a href="eval_ex1.html">Exercice 1 </a></li>
+            <li><a href="eval_ex2.html">Exercice 2 </a></li>
+            <li><a href="eval_ex3.html">Exercice 3</a></li>
+            <li><a href="eval_ex4.html">Exercice 4</a></li>
+            </li>
+          </ul>
+        </nav>
+  </legend>
     <div class="flex-container2">
-      <div id="code">
-        <textarea style="height: 600px;width: 700px; color: blue;">
+    <div id="code">
+      <textarea style="height: 600px;width: 700px; color: blue;">
       <sript>
         function varexemple1(){
         myVar1 = 324; type number
@@ -93,43 +96,40 @@
         
       </sript>
     </textarea>
-      </div>
     </div>
-    <div id="exemple1">
-      <div><input type="button" onclick="varexemple1()" value="exemple1">
-
-      </div>
+    <div id="exemple1">    <div ><input type="button" onclick="varexemple1()" value="exemple1">
+      
     </div>
+   
   </fieldset>
 
 
-  <input type="button" onclick="myFunction()" value="resetpage">
+  <input type="button" onclick="myFunction()" value="resetpage"></div></div>
+<hr>
+<script>
+function varexemple1(){
+myVar1 = 324;    /* type number*/
+myVar2 = "Bonjour";  // type string
+myVar3 = true; // type boolean
+myVar4 = new Array(); // type object
+document.getElementById("exemple1").innerHTML = 
+"myVar = 324 : " + typeof myVar1 + "<br>" +"<br>" +
+"myVar = Bonjour : " + typeof myVar2 + "<br>" +"<br>" +
+"myVar = true :" + typeof myVar3 + "<br>" +"<br>" +
+"myVar = true :" + typeof myVar4 + "<br>" +"<br>" 
 
-  <hr>
-  <script>
-    function varexemple1() {
-      myVar1 = 324;    /* type number*/
-      myVar2 = "Bonjour";  // type string
-      myVar3 = true; // type boolean
-      myVar4 = new Array(); // type object
-      document.getElementById("exemple1").innerHTML =
-        "myVar = 324 : " + typeof myVar1 + "<br>" + "<br>" +
-        "myVar = Bonjour : " + typeof myVar2 + "<br>" + "<br>" +
-        "myVar = true :" + typeof myVar3 + "<br>" + "<br>" +
-        "myVar = true :" + typeof myVar4 + "<br>" + "<br>"
+}
 
-    }
+function myFunction() {
+  location.reload();
+}
+function reset() {
+  document.getElementById("myForm").reset();
+}
 
-    function myFunction() {
-      location.reload();
-    }
-    function reset() {
-      document.getElementById("myForm").reset();
-    }
+</script>
 
-  </script>
-
-  <hr>
+<hr>
   <footer>
     <nav>
       <ul>
