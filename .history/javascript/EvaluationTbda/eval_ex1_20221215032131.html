@@ -12,7 +12,6 @@
     .flex-container2 {
       display: flex;
       background-color: rgb(114, 111, 113);
-      justify-content: center;
     }
 
     .flex-container2>div {
@@ -55,21 +54,26 @@
     title="promotion jarditou" />
   <hr />
   <h1>Evaluation TBDA 2022</h1>
+
   <hr>
+
+
+
   <fieldset>
-    <nav style="padding:1px 0; font-size:20px;">
-      <ul style="background-color: #525a5b;">
-        <li><a href="eval_ex1.html">Exercice 1 </a></li>
-        <li><a href="eval_ex2.html">Exercice 2 </a></li>
-        <li><a href="eval_ex3.html">Exercice 3</a></li>
-        <li><a href="eval_ex4.html">Exercice 4</a></li>
-      </ul>
-    </nav>
+    <legend style="padding:1px 0; font-size:20px;">
+      <nav>
+        <ul>
+          <li><a href="eval_ex1.html">Exercice 1 </a></li>
+          <li><a href="eval_ex2.html">Exercice 2 </a></li>
+          <li><a href="eval_ex3.html">Exercice 3</a></li>
+          <li><a href="eval_ex4.html">Exercice 4</a></li>
+          </li>
+        </ul>
+      </nav>
+    </legend>
     <div class="flex-container2">
       <div id="code">
-        <h5>JavaScript TEXT: Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
+        <h5>JavaScript Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</h5>
         <textarea style="height: 600px;width: 700px; color: blue;">
         <script>
           var j = 0;
@@ -113,15 +117,20 @@
           }
         </script>
     </textarea>
+
       </div>
-      <div>
-        <h5>JavaScript EXÉCUTION : Exercice 1 -  Notice : pour QUITTER cliquez 2 fois ok "champs vide"</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
-        <textarea id="ex1" style="height: 600px;width: 700px; color: blue;"></textarea>
-      </div>
-    </div>
+
+      <div id="ex1">
+
+        <div><input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
+
+        </div>
+
   </fieldset>
+
+
+  <input type="button" onclick="myFunction()" value="resetpage"></div>
+  </div>
   <hr>
   <script>
     var j = 0;
@@ -164,6 +173,7 @@
       document.getElementById("myForm").reset();
     }
   </script>
+
   <hr>
   <footer>
     <nav>

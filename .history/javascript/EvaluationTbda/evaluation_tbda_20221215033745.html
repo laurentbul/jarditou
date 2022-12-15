@@ -11,12 +11,11 @@
   <style>
     .flex-container2 {
       display: flex;
-      background-color: rgb(114, 111, 113);
-      justify-content: center;
+      background-color: rgb(73, 133, 149);
     }
 
     .flex-container2>div {
-      background-color: #554c2c;
+      background-color: #e4bcbc;
       margin: 10px;
       padding: 20px;
       font-size: 30px;
@@ -39,7 +38,7 @@
       <li><a href="../index.html">Accueil</a></li>
       <li><a href="../table.html">Tableau</a></li>
       <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../EvaluationTbda/evaluation_tbda.html">Evaluation Tbda</a></li>
+      <li><a href="evaluation_tbda.html">Evaluation Tbda</a></li>
       <li class="search-container">
         <div>
           <form action="/action_page.php">
@@ -54,11 +53,14 @@
   <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
     title="promotion jarditou" />
   <hr />
-  <h1>Evaluation TBDA 2022</h1>
+  <h1>Evaluation fin de formation : Tbda</h1>
   <hr>
+
+
+
   <fieldset>
     <nav style="padding:1px 0; font-size:20px;">
-      <ul style="background-color: #525a5b;">
+      <ul>
         <li><a href="eval_ex1.html">Exercice 1 </a></li>
         <li><a href="eval_ex2.html">Exercice 2 </a></li>
         <li><a href="eval_ex3.html">Exercice 3</a></li>
@@ -67,66 +69,66 @@
     </nav>
     <div class="flex-container2">
       <div id="code">
-        <h5>JavaScript TEXT</h5>
         <textarea style="height: 600px;width: 700px; color: blue;">
-    <h1>Multiplication Table</h1>
-    Enter a number:qw
-    <input type="text" id="num" /><br /><br />
-    Enter limit:
-    <input type="text" id="limit" />
-    <input type="button" value="Find" onClick="multiply()" />
-    <p id="result"></p>
-    <script>
-      function multiply() {
-        var n = document.getElementById('num').value;
-        var l = document.getElementById('limit').value;
-        var out = "";
-        for (var i = 1; i <= 10; i++) {
-          out = out + i + " * " + n + " = " + i * n + "<br/>";
+      <sript>
+        function varexemple1(){
+        myVar1 = 324; type number
+        myVar2 = "Bonjour";  // type string
+        myVar3 = true; // type boolean
+        myVar4 = new Array(); // type object
+        document.getElementById("exemple1").innerHTML = 
+        "myVar = 324 : " + typeof myVar1 +
+        "myVar = Bonjour : " + typeof myVar2+
+        "myVar = true :" + typeof myVar3 + 
+        "myVar = true :" + typeof myVar4 ;
+        
         }
-        document.getElementById("result").innerHTML = out;
-      }
-      function myFunction() {
-        location.reload();
-      }
-      function reset() {
-        document.getElementById("myForm").reset();
-      }
-    </script>
-</textarea>
+        
+        function myFunction() { 
+          location.reload();
+        }
+        function reset() {
+          document.getElementById("myForm").reset();
+        }
+        
+      </sript>
+    </textarea>
       </div>
-      <div id="ex1">
-        <h5>JavaScript EXÉCUTION</h5>
-        <p>Notice : nous avons le TEXT JAVASCRIPT sur notre coté gauche!</p>
-        <p> sur le coté droit : nous avons le programme à EXECUTER.</p>
-        <p>Nous allons utilser cette présentation pour les différents exercices : ex1,ex2,ex3,ex4</p>
-        <input type="text" id="num" /><br /><br />
-        Enter limit:
-        <input type="text" id="limit" />
-        <input type="button" onclick="multiply() " value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="reloadPage">
-        <p id="result"></p>
+    </div>
+    <div id="exemple1">
+      <div><input type="button" onclick="varexemple1()" value="exemple1">
+
       </div>
     </div>
   </fieldset>
+
+
+  <input type="button" onclick="myFunction()" value="resetpage">
+
   <hr>
   <script>
-    function multiply() {
-      var n = document.getElementById('num').value;
-      var l = document.getElementById('limit').value;
-      var out = "";
-      for (var i = 1; i <= 10; i++) {
-        out = out + i + " * " + n + " = " + i * n + "<br/>";
-      }
-      document.getElementById("result").innerHTML = out;
+    function varexemple1() {
+      myVar1 = 324;    /* type number*/
+      myVar2 = "Bonjour";  // type string
+      myVar3 = true; // type boolean
+      myVar4 = new Array(); // type object
+      document.getElementById("exemple1").innerHTML =
+        "myVar = 324 : " + typeof myVar1 + "<br>" + "<br>" +
+        "myVar = Bonjour : " + typeof myVar2 + "<br>" + "<br>" +
+        "myVar = true :" + typeof myVar3 + "<br>" + "<br>" +
+        "myVar = true :" + typeof myVar4 + "<br>" + "<br>"
+
     }
+
     function myFunction() {
       location.reload();
     }
     function reset() {
       document.getElementById("myForm").reset();
     }
+
   </script>
+
   <hr>
   <footer>
     <nav>

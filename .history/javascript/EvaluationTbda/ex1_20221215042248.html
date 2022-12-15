@@ -75,22 +75,46 @@
         <input type="button" value="Find" onClick="multiply()" />
         <p id="result"></p>
         <script>
-            function multiply() {
-                var n = document.getElementById('num').value;
-                var l = document.getElementById('limit').value;
-                var out = "";
-                for (var i = 1; i <= 10; i++) {
-                    out = out + i + " * " + n + " = " + i * n + "<br/>";
+            var j = 0;
+            var a = 0;
+            var v = 0;
+            var personnes;
+            function exercice1() {
+              do {
+                personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+  
+                if (personnes == "") {
+                  break;
                 }
-                document.getElementById("result").innerHTML = out;
+                else if (personnes < 18) {
+                  j++;
+                }
+                else if ((personnes <= 18) || (personnes <= 65)) {
+                  a++;
+                }
+                else if (personnes > 65 || personnes < 100) {
+                  v++;
+                }
+                else if (personnes == "q" || personnes == "Q") {
+                  alert("bye-bye \n merci");
+                  break;
+                }
+                else {
+                  alert("Entrer un chiffre svp entre 1 et 100")
+                }
+              }
+              while (personnes != 100);
+              window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+              document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
+              //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
             }
             function myFunction() {
-                location.reload();
+              location.reload();
             }
             function reset() {
-                document.getElementById("myForm").reset();
+              document.getElementById("myForm").reset();
             }
-        </script>
+          </script>
     </textarea>
             </div>
             <div id="ex1">
@@ -109,22 +133,46 @@
     </fieldset>
     <hr>
     <script>
-        function multiply() {
-            var n = document.getElementById('num').value;
-            var l = document.getElementById('limit').value;
-            var out = "";
-            for (var i = 1; i <= 10; i++) {
-                out = out + i + " * " + n + " = " + i * n + "<br/>";
+        var j = 0;
+        var a = 0;
+        var v = 0;
+        var personnes;
+        function exercice1() {
+          do {
+            personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+
+            if (personnes == "") {
+              break;
             }
-            document.getElementById("result").innerHTML = out;
+            else if (personnes < 18) {
+              j++;
+            }
+            else if ((personnes <= 18) || (personnes <= 65)) {
+              a++;
+            }
+            else if (personnes > 65 || personnes < 100) {
+              v++;
+            }
+            else if (personnes == "q" || personnes == "Q") {
+              alert("bye-bye \n merci");
+              break;
+            }
+            else {
+              alert("Entrer un chiffre svp entre 1 et 100")
+            }
+          }
+          while (personnes != 100);
+          window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+          document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
+          //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
         }
         function myFunction() {
-            location.reload();
+          location.reload();
         }
         function reset() {
-            document.getElementById("myForm").reset();
+          document.getElementById("myForm").reset();
         }
-    </script>
+      </script>
     <hr>
     <footer>
         <nav>

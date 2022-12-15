@@ -12,7 +12,7 @@
     .flex-container2 {
       display: flex;
       background-color: rgb(114, 111, 113);
-      justify-content: center;
+       justify-content: center;
     }
 
     .flex-container2>div {
@@ -63,13 +63,12 @@
         <li><a href="eval_ex2.html">Exercice 2 </a></li>
         <li><a href="eval_ex3.html">Exercice 3</a></li>
         <li><a href="eval_ex4.html">Exercice 4</a></li>
+        </li>
       </ul>
     </nav>
     <div class="flex-container2">
       <div id="code">
         <h5>JavaScript TEXT: Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
         <textarea style="height: 600px;width: 700px; color: blue;">
         <script>
           var j = 0;
@@ -114,14 +113,16 @@
         </script>
     </textarea>
       </div>
-      <div>
-        <h5>JavaScript EXÉCUTION : Exercice 1 -  Notice : pour QUITTER cliquez 2 fois ok "champs vide"</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
-        <textarea id="ex1" style="height: 600px;width: 700px; color: blue;"></textarea>
-      </div>
-    </div>
+      <div >
+        <h5>JavaScript EXÉCUTION : Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</h5>
+        <div><input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
+          <input type="button" onclick="myFunction()" value="vider la page"></div>
+        <textarea id="ex1"></textarea>
+        </div>
+
   </fieldset>
+
+  </div>
   <hr>
   <script>
     var j = 0;
@@ -164,6 +165,7 @@
       document.getElementById("myForm").reset();
     }
   </script>
+
   <hr>
   <footer>
     <nav>

@@ -7,16 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cours exercices HTML</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-
   <style>
     .flex-container2 {
       display: flex;
       background-color: rgb(114, 111, 113);
-      justify-content: center;
     }
 
     .flex-container2>div {
-      background-color: #554c2c;
+      background-color: #5cbdca;
       margin: 10px;
       padding: 20px;
       font-size: 30px;
@@ -50,11 +48,11 @@
       </li>
     </ul>
   </nav>
-
   <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
     title="promotion jarditou" />
   <hr />
   <h1>Evaluation TBDA 2022</h1>
+  <include src="./horaire.html"></include>
   <hr>
   <fieldset>
     <nav style="padding:1px 0; font-size:20px;">
@@ -63,62 +61,65 @@
         <li><a href="eval_ex2.html">Exercice 2 </a></li>
         <li><a href="eval_ex3.html">Exercice 3</a></li>
         <li><a href="eval_ex4.html">Exercice 4</a></li>
+        </li>
       </ul>
     </nav>
     <div class="flex-container2">
       <div id="code">
-        <h5>JavaScript TEXT</h5>
+        <h5>JavaScript Exercice 3 : recherche d'un prénom</h5>
         <textarea style="height: 600px;width: 700px; color: blue;">
-    <h1>Multiplication Table</h1>
-    Enter a number:qw
-    <input type="text" id="num" /><br /><br />
-    Enter limit:
-    <input type="text" id="limit" />
-    <input type="button" value="Find" onClick="multiply()" />
-    <p id="result"></p>
-    <script>
-      function multiply() {
-        var n = document.getElementById('num').value;
-        var l = document.getElementById('limit').value;
-        var out = "";
-        for (var i = 1; i <= 10; i++) {
-          out = out + i + " * " + n + " = " + i * n + "<br/>";
-        }
-        document.getElementById("result").innerHTML = out;
-      }
-      function myFunction() {
-        location.reload();
-      }
-      function reset() {
-        document.getElementById("myForm").reset();
-      }
-    </script>
-</textarea>
+                  <script>
+                    function tableau() {
+                      var deletelement = prompt("entrer quel valeur vous voulez supprimer : \n Banana, Orange, Apple, Mango");
+                      const prenoms = ["Banana", "Orange", "Apple", "Mango"];
+                      let fLen = prenoms.length;
+                      let text = "<ul>";
+                      for (let i = 0; i < fLen; i++) {
+                        text += "<li>" + "[" + i + "]" + prenoms[i] + "</li>";
+                        if (prenoms[i] == deletelement) {
+                          alert(" i am : " + prenoms[i] + " ma place dans le tableau : " + i);
+                          prenoms.splice(i, 1);
+                          document.getElementById("demo1").innerHTML = "la suppression c'est bien passé";
+                        }
+                      }
+                      text += "</ul>";
+                      document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : prenoms [" + prenoms + " ] ";
+                    }
+                  </script>
+    </textarea>
       </div>
       <div id="ex1">
-        <h5>JavaScript EXÉCUTION</h5>
-        <p>Notice : nous avons le TEXT JAVASCRIPT sur notre coté gauche!</p>
-        <p> sur le coté droit : nous avons le programme à EXECUTER.</p>
-        <p>Nous allons utilser cette présentation pour les différents exercices : ex1,ex2,ex3,ex4</p>
-        <input type="text" id="num" /><br /><br />
-        Enter limit:
-        <input type="text" id="limit" />
-        <input type="button" onclick="multiply() " value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="reloadPage">
-        <p id="result"></p>
+        <div>
+          <h5>JavaScript Exercice 3 sur tableau </h5>
+          <h6>Notre Tableau :
+            prenoms = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", " "];
+            <p>Cliquez sur supprimer pour commencer</p>
+          </h6>
+          <p id="demo1"></p>
+          <p id="demo" style="color:blue"></p>
+          <input type="button" onclick="tableau()" value=" supprimer valeur dans tableau" />
+          <input type="button" onclick="myFunction()" value="Recommencer" />
+        </div>
       </div>
     </div>
   </fieldset>
   <hr>
   <script>
-    function multiply() {
-      var n = document.getElementById('num').value;
-      var l = document.getElementById('limit').value;
-      var out = "";
-      for (var i = 1; i <= 10; i++) {
-        out = out + i + " * " + n + " = " + i * n + "<br/>";
+    function tableau() {
+      var deletelement = prompt("entrer quel valeur vous voulez supprimer : \n Flavien, Jérémy, Laurent, Melik, Nouara, Salem, Samuel");
+      const prenoms = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel"];
+      let fLen = prenoms.length;
+      let text = "<ul>";
+      for (let i = 0; i < fLen; i++) {
+        text += "<li>" + "[" + i + "]" + prenoms[i] + "</li>";
+        if (prenoms[i] == deletelement) {
+          alert(" i am : " + prenoms[i] + " ma place dans le tableau : " + i);
+          prenoms.splice(i, 1);
+          document.getElementById("demo1").innerHTML = "la suppression c'est bien passé";
+        }
       }
-      document.getElementById("result").innerHTML = out;
+      text += "</ul>";
+      document.getElementById("demo").innerHTML = "nouveau tableau aprés suppression : prenoms [" + prenoms + " ] ";
     }
     function myFunction() {
       location.reload();
