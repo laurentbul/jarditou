@@ -169,8 +169,9 @@
             else if (pap > 500) {
                 port = 0;
                 rem = pap * 10 / 100;
+                pap = pap - rem;
                 if (pap - rem < 500) { port = pap * 2 / 100 }
-                pap = pap + port - rem;
+                pap = pap + port;
                 pap = pap.toFixed(2);
             }
             document.getElementById("answer").innerHTML = "prix à payer net : " + pap + " total remise : " + rem + " cout de transport : " + port;
