@@ -1,6 +1,7 @@
 function validateForm() {
     let patternnumber = /^\d+$/
     var rgxDep =/^[0-9]{5}$/;
+    var regxAdres=/^[A-Za-z0-9_]+$/;
     let pattern = /^[a-zA-Z\s]+$/;
     let patternisnumber = /^[1-9]\d+$/
     let patterndtn = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/;
@@ -83,9 +84,14 @@ function validateForm() {
 
         document.getElementById("commentaire5").innerHTML = "Entrez votre adresse est obligatoire";
     }
-    else if (pattern.test(varadresse) === false) {
+    else if (regxAdres.test(varadresse) === false) {
         document.getElementById("commentaire5").innerHTML = "text que vous avez entré non conforme:";
     }
+
+    else if (varadresse.length < 4) {
+        document.getElementById("commentaire9").innerHTML = " Entrez votre adresse seulement chiffre et lettre accepté :est obligatoire ";
+    }
+
     else {
         document.getElementById("commentaire5").innerHTML = "votre adresse  :" + varadresse;
         document.getElementById("commentaire5").style.color = "black";
