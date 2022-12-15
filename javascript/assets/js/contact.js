@@ -1,5 +1,6 @@
 function validateForm() {
     let patternnumber = /^\d+$/
+    var rgxDep =/^[0-9]{5}$/;
     let pattern = /^[a-zA-Z\s]+$/;
     let patternisnumber = /^[1-9]\d+$/
     let patterndtn = /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/;
@@ -14,9 +15,10 @@ function validateForm() {
     var varpays = document.getElementById("fpays").value;
     var varfavoris = document.getElementById("paysselect").value;
     var varsujet = document.getElementById("fsujet").value;
+    var remember = document.getElementById('atif');
     // =============================================1=== ton nom =====================================
     if (vnom == "") {
-        document.getElementById("commentaire1").innerHTML = "Entrez votre nom : nom obligatoire";
+        document.getElementById("commentaire1").innerHTML = "Entrez votre nom : est obligatoire";
         document.getElementById("fname").focus();
     }
 
@@ -36,7 +38,7 @@ function validateForm() {
 
     vprenom = document.getElementById("fprenom").value;
     if (vprenom == "") {
-        document.getElementById("commentaire2").innerHTML = "Entrez votre prenom : nom obligatoire";
+        document.getElementById("commentaire2").innerHTML = "Entrez votre prénom :  est obligatoire";
         document.getElementById("fprenom").focus();
     }
     else if (pattern.test(vprenom) === false) {
@@ -51,10 +53,10 @@ function validateForm() {
 
 
     if (vardtn == "") {
-        document.getElementById("commentaire3").innerHTML = "entrez votre date de naissance";
+        document.getElementById("commentaire3").innerHTML = "Entrez votre date de naissance : est obligatoire";
     }
     else if (patterndtn.test(vardtn) === false) {
-        document.getElementById("commentaire3").innerHTML = "non conforme: cest des chiffres";
+        document.getElementById("commentaire3").innerHTML = "date de naissance que vous avez entré non conforme: doit etre des  chiffres";
     }
     else {
         document.getElementById("commentaire3").innerHTML = "votre date de naissance valider :";
@@ -64,10 +66,10 @@ function validateForm() {
     // // ============================================4==== ta ville =====================================
 
     if (varville == "") {
-        document.getElementById("commentaire4").innerHTML = "Entrez vtre ville obligatoire champs ne peut pas etre vide";
+        document.getElementById("commentaire4").innerHTML = "Entrez votre ville : est obligatoire ";
     }
     else if (pattern.test(varville) === false) {
-        document.getElementById("commentaire4").innerHTML = "non conforme:";
+        document.getElementById("commentaire4").innerHTML = "text que vous avec entré non conforme:";
     }
     else {
         document.getElementById("commentaire4").innerHTML = "oui :" + varville;
@@ -79,23 +81,23 @@ function validateForm() {
 
     if (varadresse == "") {
 
-        document.getElementById("commentaire5").innerHTML = "adresse boxe vide";
+        document.getElementById("commentaire5").innerHTML = "Entrez votre adresse est obligatoire";
     }
     else if (pattern.test(varadresse) === false) {
-        document.getElementById("commentaire5").innerHTML = "non conforme:";
+        document.getElementById("commentaire5").innerHTML = "text que vous avez entré non conforme:";
     }
     else {
-        document.getElementById("commentaire5").innerHTML = "hello :" + varadresse;
+        document.getElementById("commentaire5").innerHTML = "votre adresse  :" + varadresse;
         document.getElementById("commentaire5").style.color = "black";
     }
 
     // // =============================================6=== ton code postale=====================================
 
     if (varcdpost == "") {
-        document.getElementById("commentaire6").innerHTML = "cdp vide";
+        document.getElementById("commentaire6").innerHTML = "Entrez votre code postal est obligatoire";
     }
 
-    else if (patternisnumber.test(varcdpost) === false) {
+    else if (rgxDep.test(varcdpost) === false) {
         document.getElementById("commentaire6").innerHTML = "il faut 5 chiffre:";
     }
     else {
@@ -105,10 +107,10 @@ function validateForm() {
     // // ==============================================7== ton pays=====================================
 
     if (varpays == "") {
-        document.getElementById("commentaire7").innerHTML = "vide pays";
+        document.getElementById("commentaire7").innerHTML = "Entrez votre pays est obligatoire";
     }
     else if (pattern.test(varpays) === false) {
-        document.getElementById("commentaire7").innerHTML = "non conforme:";
+        document.getElementById("commentaire7").innerHTML = "pays non conforme :";
     }
     else {
         document.getElementById("commentaire7").innerHTML = "conforme votre pays :" + varpays;
@@ -117,23 +119,29 @@ function validateForm() {
 
     // // ===============================================8 favoris=====================================
 
-    if (varfavoris == "") { document.getElementById("commentaire8").innerHTML = "moi vide" }
+    if (varfavoris == "") { document.getElementById("commentaire8").innerHTML = "vous n'avez pas choisis votre pays de reve" }
     else {
         document.getElementById("commentaire8").innerHTML = "selection est :" + varfavoris;
         document.getElementById("commentaire8").style.color = "black";
     }
     // // ===============================================8 sujet =====================================
 
-    if (varsujet == "") { document.getElementById("commentaire9").innerHTML = "sujet pas" }
+    if (varsujet == "") { document.getElementById("commentaire9").innerHTML = "Entrez votre de sujet est obligatoire" }
 
     else if (pattern.test(varsujet) === false) {
-        document.getElementById("commentaire9").innerHTML = "non conforme:" + varsujet;
+        document.getElementById("commentaire9").innerHTML = "sujet non conforme:" + varsujet;
     }
     else if (varsujet.length < 50) {
-        document.getElementById("commentaire9").innerHTML = "il faut rentrer au minimum 50 caracteres ";
+        document.getElementById("commentaire9").innerHTML = "il faut rentrer au minimum 50 caracteres dans le champs ";
     }
     else {
         document.getElementById("commentaire9").innerHTML = "votre sujet " + varsujet
         document.getElementById("commentaire9").style.color = "black";
+    }
+// // =============================================== checkbox =====================================
+    if (remember.checked){
+        document.getElementById("commentaire10").innerHTML="vous avez accepté"
+    }else{
+        document.getElementById("commentaire10").innerHTML="vous n' avez pas accepté"
     }
 }   

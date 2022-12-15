@@ -44,54 +44,54 @@
         <div class="col-25">
           <label>Nom*:</label>
         </div>
-        <input type="text" id="fname" value="" placeholder="votre nom de famille..">
+        <input type="text" id="fname" value="" placeholder="Entrez votre nom de famille..">
         <div class="error" id="commentaire1"> </div>
       </div>
       <div class="row">
         <div class="col-25">
           <label>Prenom*:</label>
         </div>
-        <input type="text" id="fprenom" placeholder="votre nom de famille..">
+        <input type="text" id="fprenom" placeholder="Entrez votre prénom ..">
         <div class="error" id="commentaire2"> </div>
       </div>
       <div class="row">
         <div class="col-25">
           <label> Date de naissance *:</label>
         </div>
-        <input type="date" id="fdtn" placeholder="votre nom de famille..">
+        <input type="date" id="fdtn" placeholder="Entrez  votre date de naissance.">
         <div class="error" id="commentaire3"></div>
       </div>
       <div class="row">
         <div class="col-25">
           <label> ville *:</label>
         </div>
-        <input type="text" id="fville" placeholder="votre nom de famille..">
+        <input type="text" id="fville" placeholder="Entrez  votre ville..">
         <div class="error" id="commentaire4"></div>
       </div>
       <div class="row">
         <div class="col-25">
           <label> adresse *:</label>
         </div>
-        <input type="text" id="fadresse" placeholder="votre adresse..">
+        <input type="text" id="fadresse" placeholder="Entrez  votre adresse..">
         <div class="error" id="commentaire5"></div>
       </div>
       <div class="row">
         <div class="col-25">
           <label> Code postal *:</label>
         </div>
-        <input type="number" id="fcodepostal" placeholder="votre coode postal..">
+        <input type="number" id="fcodepostal" placeholder="Entrez  votre coode postal..">
         <div class="error" id="commentaire6"></div>
       </div>
       <div class="row">
         <div class="col-25">
           <label> Pays *:</label>
         </div>
-        <input type="text" id="fpays" placeholder="votre pays..">
+        <input type="text" id="fpays" placeholder="Entrez  votre pays..">
         <div class="error" id="commentaire7"></div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label> favoris:</label>
+          <label> Votre pays de reve :</label>
         </div>
         <select id="paysselect">
           <option>france</option>
@@ -105,14 +105,30 @@
         <div class="col-25">
           <label> Sujet *:</label>
         </div>
-        <textarea id="fsujet" name="fsujet" placeholder="ecrivez votre text ici minimum 50 caracteres.."
+        <textarea id="fsujet" name="fsujet" placeholder="Entrez  votre text ici minimum 50 caracteres.."
           style="height: 200px; width: 100%;"></textarea>
         <div class="error" id="commentaire9"></div>
       </div>
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="cgu" name="cgu" required>
+      <div class="atif">
+        <input type="checkbox" class="atif" id="atif" name="atif" required>
         <label class="custom-control-label" for="cgu">* J'accepte le traitement informatique de ce formulaire.</label>
+        <div class="error" id="commentaire10"></div>
+        <input type="button" onclick="validate()"  value="checkboxcheck"/>
+        <script>
+
+function validate(){
+    var remember = document.getElementById('atif');
+    if (remember.checked){
+        document.getElementById("commentaire10").innerHTML="vous avez accepté"
+    }else{
+      document.getElementById("commentaire10").innerHTML="vous n' avez pas accepté"
+    }
+}
+</script>
+        </script>
       </div><br>
+
+
       <input type="button" onclick="validateForm()" value="Valider form"> <input type="reset" onclick="myreset()"
         value="Reset">
       <script>
