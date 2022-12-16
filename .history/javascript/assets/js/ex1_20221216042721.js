@@ -20,12 +20,12 @@ function exercice1() {
       v++;
     }
     else if (personnes == 100) {
-      alert(" nous avons trouvé notre centenaire .  \n fin des testes merci et aurevoir ..");
+      alert(" nous avons trouvé notre centenaire .  \n fin de jeu merci et aurevoir ..");
       c++;
       break;
     }
     else if (personnes > 100) {
-      alert(" vous etes hors concours!  fin du test !\n merci et aurevoir");
+      alert(" vous etes hors concours!  \n merci et aurevoir");
       break;
     }
 

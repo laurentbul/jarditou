@@ -3,8 +3,9 @@ var j = 0;
 var a = 0;
 var v = 0;
 var c =0;
+var personnes;
 function exercice1() {
-  while(true){
+  while(0<personnes && personnes>=100){
     personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
 
     if (personnes == "") {
@@ -13,19 +14,17 @@ function exercice1() {
     else if (personnes < 18) {
       j++;
     }
-    else if ((personnes >= 18) & (personnes <= 65)) {
+    else if ((personnes <= 18) && (personnes <= 65)) {
       a++;
     }
-    else if (personnes > 65 & personnes < 100) {
+    else if (personnes > 65 && personnes < 100) {
       v++;
     }
     else if (personnes == 100) {
-      alert(" nous avons trouvé notre centenaire .  \n fin des testes merci et aurevoir ..");
       c++;
-      break;
     }
     else if (personnes > 100) {
-      alert(" vous etes hors concours!  fin du test !\n merci et aurevoir");
+      alert(" vous etes hors concours \n merci");
       break;
     }
 
@@ -37,8 +36,9 @@ function exercice1() {
       alert("Entrer un chiffre svp entre 1 et 100")
     }
   }
-  window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ");
-  document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ";
+  while (personnes != 100);
+  window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+  document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
   //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
 }
 function myFunction() {

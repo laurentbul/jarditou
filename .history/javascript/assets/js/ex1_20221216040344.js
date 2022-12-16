@@ -13,19 +13,17 @@ function exercice1() {
     else if (personnes < 18) {
       j++;
     }
-    else if ((personnes >= 18) & (personnes <= 65)) {
+    else if ((personnes <= 18) && (personnes <= 65)) {
       a++;
     }
-    else if (personnes > 65 & personnes < 100) {
+    else if (personnes > 65 && personnes < 100) {
       v++;
     }
     else if (personnes == 100) {
-      alert(" nous avons trouvé notre centenaire .  \n fin des testes merci et aurevoir ..");
       c++;
-      break;
     }
     else if (personnes > 100) {
-      alert(" vous etes hors concours!  fin du test !\n merci et aurevoir");
+      alert(" vous etes hors concours \n merci");
       break;
     }
 

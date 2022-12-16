@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cours exercices HTML</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-
   <style>
     .flex-container2 {
       display: flex;
@@ -50,7 +49,6 @@
       </li>
     </ul>
   </nav>
-
   <img src="../assets/img/evaluation2.jpg" width="500" height="400" alt="qu'est ce que html" class="imgpromotion"
     title="promotion jarditou" />
   <hr />
@@ -67,18 +65,23 @@
     </nav>
     <div class="flex-container2">
       <div id="code">
-        <h5>JavaScript TEXT: Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
+        <h5>JavaScript Exercice Exercice 2 : Table de multiplication</h5>
         <textarea style="height: 600px;width: 700px; color: blue;">
+        <h1>Multiplication Table</h1>
+        Enter a number:qw
+        <input type="text" id="num" /><br /><br />
+        Enter limit:
+        <input type="text" id="limit" />
+        <input type="button" value="Find" onClick="multiply()" />
+        <p id="result"></p>
         <script>
-
           var j = 0;
           var a = 0;
           var v = 0;
           var c = 0;
+          var personnes;
           function exercice1() {
-            while (true) {
+            do {
               personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
 
               if (personnes == "") {
@@ -87,22 +90,21 @@
               else if (personnes < 18) {
                 j++;
               }
-              else if ((personnes >= 18) & (personnes <= 65)) {
+              else if ((personnes <= 18) && (personnes <= 65)) {
                 a++;
               }
-              else if (personnes > 65 & personnes < 100) {
+              else if (65 < personnes && personnes < 100) {
                 v++;
               }
               else if (personnes == 100) {
-                alert(" nous avons trouvé notre centenaire .  \n fin des testes merci et aurevoir ..");
                 c++;
+                alert("bye-bye \n merci");
                 break;
               }
               else if (personnes > 100) {
-                alert(" vous etes hors concours!  fin du test !\n merci et aurevoir");
+                alert("bye-bye \n merci");
                 break;
               }
-
               else if (personnes == "q" || personnes == "Q") {
                 alert("bye-bye \n merci");
                 break;
@@ -111,8 +113,9 @@
                 alert("Entrer un chiffre svp entre 1 et 100")
               }
             }
-            window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ");
-            document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ";
+            while (personnes <= 100);
+            window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ");
+            document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + c + "" + " centenaire ");
             //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
           }
           function myFunction() {
@@ -124,23 +127,72 @@
         </script>
     </textarea>
       </div>
-      <div>
-        <h5>JavaScript EXÉCUTION : Exercice 1 - Notice : pour QUITTER cliquez 2 fois ok "champs vide"</h5>
-        <input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
-        <input type="button" onclick="myFunction()" value="vider la page">
-        <textarea id="ex1" style="height: 600px;width: 700px; color: blue;"></textarea>
+      <div id="ex1">
+        <div>
+          Entrer le nombre:
+          <div><input type="button" onclick="exercice1()" value="EXECUTER(ex1)">
+            <input type="button" onclick="myFunction()" value="Reload page">
+          </div>
+          Enter limit:
+          <input type="text" id="limit" />
+          <input type="button" value="Find" onClick="multiply()" />
+          <input type="button" onclick="multiply() " value="EXECUTER(ex1)">
+          <input type="button" onclick="myFunction()" value="reloadPage">
+          <p id="result"></p>
+        </div>
       </div>
     </div>
   </fieldset>
   <hr>
+  <script>
+    var j = 0;
+    var a = 0;
+    var v = 0;
+    var personnes=10;
+
+    while (personnes <= 100); {
+
+      personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+
+      if (personnes == "") {
+        break;
+      }
+      else if (personnes < 18) {
+        j++;
+      }
+      else if ((personnes <= 18) || (personnes <= 65)) {
+        a++;
+      }
+      else if (personnes > 65 || personnes < 100) {
+        v++;
+      }
+      else if (personnes == "q" || personnes == "Q") {
+        alert("bye-bye \n merci");
+        break;
+      }
+      else {
+        alert("Entrer un chiffre svp entre 1 et 100")
+      }
+
+
+      function myFunction() {
+        location.reload();
+      }
+      function reset() {
+        document.getElementById("myForm").reset();
+      }
+      window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+      document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
+      //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+    }
+  </script>
   <hr>
-  <script type="text/javascript" src="../assets/js/ex1.js"></script>
   <footer>
     <nav>
       <ul>
-        <li><a href="./../mentionlegale.html">Mention légales</a></li>
-        <li><a href="./../horaire.html">Horaires</a></li>
-        <li><a href="./../plandusite.html">Plan du site</a></li>
+        <li><a href="mentionlegale.html">Mention légales</a></li>
+        <li><a href="horaire.html">Horaires</a></li>
+        <li><a href="plandusite.html">Plan du site</a></li>
       </ul>
     </nav>
     <p style="color: rgb(244, 238, 238);">

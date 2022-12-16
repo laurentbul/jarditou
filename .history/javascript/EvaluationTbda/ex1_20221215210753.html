@@ -140,7 +140,7 @@
         var v = 0;
         personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
         function exercice1() {
-          while(0<personnes &  personnes <= 100) {
+          do {
 
             if (personnes == "") {
               break;
@@ -148,35 +148,23 @@
             else if (personnes < 18) {
               j++;
             }
-            else if ((personnes <= 18) && (personnes <= 65)) {
+            else if ((personnes <= 18) || (personnes <= 65)) {
               a++;
             }
-            else if (65 < personnes  && personnes < 100) {
+            else if (personnes > 65 || personnes < 100) {
               v++;
             }
-
-            else if (personnes == 100) {
-              c++;
-              break;
-            }
-
-            else if (personnes >= 100) {
-              alert("plus de 100");
-              break;
-            }
-
             else if (personnes == "q" || personnes == "Q") {
               alert("bye-bye \n merci");
               break;
             }
-
             else {
               alert("Entrer un chiffre svp entre 1 et 100")
             }
           }
-
-          window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c  + " " + " centenaire ");
-          document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c  + " " + " centenaire ";
+          while (personnes == 100);
+          window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+          document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
           //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
         }
         function myFunction() {

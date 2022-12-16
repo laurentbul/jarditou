@@ -66,7 +66,7 @@
         <div class="flex-container2">
             <div id="code">
                 <h5>JavaScript Exercice Exercice 2 : Table de multiplication</h5>
-                <!-- <textarea style="height: 600px;width: 700px; color: blue;">
+                <textarea style="height: 600px;width: 700px; color: blue;">
         <h1>Multiplication Table</h1>
         Enter a number:qw
         <input type="text" id="num" /><br /><br />
@@ -78,6 +78,7 @@
             var j = 0;
             var a = 0;
             var v = 0;
+            var c =0;
             var personnes;
             function exercice1() {
               do {
@@ -99,13 +100,17 @@
                   alert("bye-bye \n merci");
                   break;
                 }
+                else if (personnes == 100 ) {
+                  alert("bye-bye \n merci");
+                  break;
+                }
                 else {
                   alert("Entrer un chiffre svp entre 1 et 100")
                 }
               }
-              while (personnes != 100);
-              window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
-              document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
+              while (personnes <= 100);
+              window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c + "" + " centenaire ");
+              document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c + "" + " centenaire ");
               //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
             }
             function myFunction() {
@@ -115,7 +120,7 @@
               document.getElementById("myForm").reset();
             }
           </script>
-    </textarea> -->
+    </textarea>
             </div>
             <div id="ex1">
                 <div>
@@ -138,9 +143,10 @@
         var j = 0;
         var a = 0;
         var v = 0;
-        personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
+        var personnes;
         function exercice1() {
-          while(0<personnes &  personnes <= 100) {
+          do {
+            personnes = window.prompt("Entrez votre age :\n Pour Quitter : q + entrer ");
 
             if (personnes == "") {
               break;
@@ -148,35 +154,23 @@
             else if (personnes < 18) {
               j++;
             }
-            else if ((personnes <= 18) && (personnes <= 65)) {
+            else if ((personnes <= 18) || (personnes <= 65)) {
               a++;
             }
-            else if (65 < personnes  && personnes < 100) {
+            else if (personnes > 65 || personnes < 100) {
               v++;
             }
-
-            else if (personnes == 100) {
-              c++;
-              break;
-            }
-
-            else if (personnes >= 100) {
-              alert("plus de 100");
-              break;
-            }
-
             else if (personnes == "q" || personnes == "Q") {
               alert("bye-bye \n merci");
               break;
             }
-
             else {
               alert("Entrer un chiffre svp entre 1 et 100")
             }
           }
-
-          window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c  + " " + " centenaire ");
-          document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " +  c  + " " + " centenaire ";
+          while (personnes != 100);
+          window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ");
+          document.getElementById("ex1").innerHTML = "Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" + " vieux\n " + " dont " + " 1 " + "" + " centenaire ";
           //document.write("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
         }
         function myFunction() {
